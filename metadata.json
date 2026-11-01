@@ -1,0 +1,6 @@
+{
+  "name": "Akshita & Ramit – The Ring Ceremony",
+  "description": "A luxury interactive Indian Ring Ceremony invitation website for Akshita Singh & Ramit Singh on 23 November 2026 at Chaudhary Farm House, Meerut.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,298 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --gold-primary: #D4AF37;
+    --gold-deep: #B38F24;
+    --gold-light: #F6E6B4;
+    --maroon-royal: #5E1924;
+    --maroon-deep: #3D0C13;
+    --cream-base: #FFFDF9;
+    --peach-soft: #FDEEE4;
+    --peach-warm: #FAD9C5;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    background-color: #FFFDF9;
+    color: #4A151B;
+    overflow-x: hidden;
+    transition: background-color 0.8s ease, color 0.8s ease;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-cormorant {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-script {
+  font-family: 'Great Vibes', cursive;
+}
+
+.font-sans-clean {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-devanagari {
+  font-family: 'Noto Serif Devanagari', 'Tiro Devanagari Hindi', 'Cormorant Garamond', serif;
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+}
+
+/* Luxurious gold foil text effect */
+.text-gold-foil {
+  background: linear-gradient(135deg, #ECC880 0%, #C89938 45%, #FBF1D5 55%, #AA7B25 80%, #ECC880 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.text-gold-deep {
+  background: linear-gradient(135deg, #B58428 0%, #8D5F13 50%, #B58428 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #CBA135 0%, #E8CD78 50%, #B38626 100%);
+}
+
+.bg-gold-subtle {
+  background: linear-gradient(135deg, rgba(232, 205, 120, 0.15) 0%, rgba(179, 134, 38, 0.08) 100%);
+}
+
+.bg-royal-card {
+  background: radial-gradient(circle at 50% 20%, rgba(254, 243, 235, 0.95), rgba(255, 253, 249, 0.98));
+}
+
+.border-gold-ornate {
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.7) inset, 0 10px 30px -10px rgba(94, 25, 36, 0.08);
+}
+
+.border-gold-double {
+  border: 3px double rgba(200, 153, 56, 0.4);
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 2.5s infinite;
+}
+
+/* Floating animation */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(2deg); }
+}
+
+.animate-float {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+/* Floating Petals keyframe */
+@keyframes petalFall {
+  0% {
+    transform: translate3d(0, -10vh, 0) rotate(0deg) scale(0.8);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.9;
+  }
+  85% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate3d(80px, 110vh, 0) rotate(360deg) scale(1);
+    opacity: 0;
+  }
+}
+
+.petal-particle {
+  position: fixed;
+  top: -40px;
+  pointer-events: none;
+  z-index: 40;
+  animation-name: petalFall;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-iteration-count: infinite;
+}
+
+/* Subtle glow */
+.gold-glow {
+  filter: drop-shadow(0 0 14px rgba(212, 175, 55, 0.4));
+}
+
+/* ========================================================
+   WORLD 2: ROYAL VELVET PLUM CELEBRATION THEME STYLING
+   High-contrast, elegant typography & crystal-clear readability
+   ======================================================== */
+
+.celebration-theme {
+  background-color: #14031B !important;
+  color: #FFFDF9 !important;
+  transition: background-color 0.8s cubic-bezier(0.16, 1, 0.3, 1), color 0.8s ease;
+}
+
+/* Section Background Transitions */
+.celebration-theme section {
+  transition: background-color 0.8s ease, border-color 0.8s ease;
+}
+
+.celebration-theme #hero {
+  background: radial-gradient(circle at 50% 30%, #340742 0%, #1F0329 55%, #120118 100%) !important;
+}
+
+.celebration-theme #couple {
+  background: linear-gradient(180deg, #120118 0%, #280534 50%, #14021B 100%) !important;
+}
+
+.celebration-theme #countdown {
+  background: linear-gradient(180deg, #14021B 0%, #320742 50%, #16021E 100%) !important;
+}
+
+.celebration-theme #event {
+  background: linear-gradient(180deg, #16021E 0%, #2B0637 50%, #14021A 100%) !important;
+}
+
+.celebration-theme #venue {
+  background: linear-gradient(180deg, #14021A 0%, #2E073C 50%, #15021D 100%) !important;
+}
+
+.celebration-theme #rsvp {
+  background: linear-gradient(180deg, #15021D 0%, #360845 50%, #120117 100%) !important;
+}
+
+.celebration-theme footer {
+  background: #0D0112 !important;
+  border-top-color: rgba(236, 72, 153, 0.35) !important;
+}
+
+/* Top Navbar in Celebration Theme */
+.celebration-theme header {
+  background: rgba(19, 2, 25, 0.94) !important;
+  border-bottom-color: rgba(236, 72, 153, 0.35) !important;
+}
+
+/* Headings in Celebration Theme */
+.celebration-theme h1,
+.celebration-theme h2,
+.celebration-theme h3 {
+  color: #FFF8F0 !important;
+  text-shadow: 0 0 25px rgba(236, 72, 153, 0.35), 0 0 50px rgba(245, 158, 11, 0.2);
+}
+
+/* Paragraphs in Celebration Theme */
+.celebration-theme p {
+  color: #FDEEE4;
+}
+
+/* Targeted Color Replacements for Celebration Theme */
+.celebration-theme .text-\[\#5E1924\]:not(button):not(a) {
+  color: #FFF1F2 !important;
+}
+
+.celebration-theme .text-\[\#732230\]:not(button):not(a) {
+  color: #FDEEE4 !important;
+}
+
+.celebration-theme .text-\[\#732230\]\/80,
+.celebration-theme .text-\[\#732230\]\/85,
+.celebration-theme .text-\[\#732230\]\/90 {
+  color: #FDEEE4 !important;
+}
+
+.celebration-theme .text-\[\#3D0C13\]:not(button):not(a) {
+  color: #FFF8F0 !important;
+}
+
+.celebration-theme .text-\[\#8D5F13\]:not(button):not(a) {
+  color: #FDE68A !important;
+}
+
+/* Card Surfaces in Celebration Theme */
+.celebration-theme .bg-gradient-to-b.from-\[\#FFFDF9\],
+.celebration-theme .bg-gradient-to-b.from-\[\#FFF9F0\],
+.celebration-theme .bg-\[\#FFFDF9\],
+.celebration-theme .bg-white {
+  background: linear-gradient(180deg, rgba(42, 8, 58, 0.92) 0%, rgba(32, 6, 45, 0.94) 100%) !important;
+  border-color: rgba(236, 72, 153, 0.45) !important;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(236, 72, 153, 0.12) !important;
+  backdrop-filter: blur(12px);
+}
+
+/* Inner highlight boxes on cards */
+.celebration-theme .bg-white\/70,
+.celebration-theme .bg-white\/80 {
+  background: rgba(62, 12, 84, 0.85) !important;
+  border-color: rgba(245, 158, 11, 0.4) !important;
+  color: #FDEEE4 !important;
+}
+
+/* CRITICAL BUTTON READABILITY RULE:
+   Buttons with gold gradient backgrounds MUST have rich dark maroon text for 100% contrast! */
+.celebration-theme a.btn-cta,
+.celebration-theme a.btn-cta span,
+.celebration-theme button.bg-gradient-to-r:not(.btn-whatsapp) span {
+  color: #3D0C13 !important;
+  font-weight: 700;
+}
+
+/* WhatsApp Button text remains pure white */
+.celebration-theme .btn-whatsapp,
+.celebration-theme .btn-whatsapp span {
+  color: #FFFFFF !important;
+}
+
+/* Ensure Gold Foil text remains brilliant */
+.celebration-theme .text-gold-foil {
+  background: linear-gradient(135deg, #FFD700 0%, #F59E0B 45%, #FFFDF0 55%, #F59E0B 80%, #FFD700 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.5));
+}
+
+/* Ornate Corner filigree turns to radiant gold */
+.celebration-theme svg.text-\[\#D4AF37\]\/60,
+.celebration-theme svg.text-\[\#ECC880\],
+.celebration-theme svg.text-\[\#C89938\] {
+  color: #FBBF24 !important;
+  filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.6));
+}
+
+/* Couple Frame Neon Glow */
+@keyframes neonCoupleGlow {
+  0%, 100% {
+    box-shadow: 0 0 30px rgba(236, 72, 153, 0.55), 0 0 70px rgba(245, 158, 11, 0.35);
+    border-color: #EC4899;
+  }
+  50% {
+    box-shadow: 0 0 45px rgba(236, 72, 153, 0.8), 0 0 95px rgba(251, 191, 36, 0.55);
+    border-color: #FBBF24;
+  }
+}
+
+.celebration-theme .couple-frame-neon {
+  animation: neonCoupleGlow 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .celebration-theme .couple-frame-neon,
+  .animate-shimmer,
+  .animate-float {
+    animation: none !important;
+  }
+}
